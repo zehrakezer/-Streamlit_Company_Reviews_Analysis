@@ -13,12 +13,12 @@ import matplotlib.pyplot as plt
 from collections import defaultdict
 from PIL import Image
 
-df = pd.read_csv(r"Streamlit\companySetting")
+df = pd.read_csv("companySetting")
 
 # Load model and preprocessing functions
 #extra ML made just for uber
-uber1 = joblib.load(r"Streamlit\Uber1.pkl")
-company = joblib.load(r"Streamlit\company.pkl")
+uber1 = joblib.load("Uber1.pkl")
+company = joblib.load("company.pkl")
 
 nltk.download('stopwords')
 
