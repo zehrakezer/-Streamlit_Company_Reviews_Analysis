@@ -18,6 +18,10 @@ df = pd.read_csv("Streamlit/companySetting")
 
 # Load model and preprocessing functions
 #extra ML made just for uber
+with open('Streamlit/Uber1.pkl', 'rb') as f:
+    # The protocol version used is detected automatically, so we do not
+    # have to specify it.
+    data = pickle.load(f)
 uber1 = pickle.loads("Streamlit/Uber1.pkl")
 company = joblib.load("Streamlit/company.pkl")
 
