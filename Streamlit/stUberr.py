@@ -18,7 +18,7 @@ df = pd.read_csv("Streamlit/companySetting")
 
 # Load model and preprocessing functions
 #extra ML made just for uber
-uber1 = pickle.load("Streamlit/Uber1.pkl",  "wb")
+uber1 = pickle.loads("Streamlit/Uber1.pkl",  "wb")
 company = joblib.load("Streamlit/company.pkl")
 
 nltk.download('stopwords')
