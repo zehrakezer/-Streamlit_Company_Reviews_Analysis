@@ -13,12 +13,12 @@ import matplotlib.pyplot as plt
 from collections import defaultdict
 from PIL import Image
 
-df = pd.read_csv("companySetting")
+df = pd.read_csv("Streamlit/companySetting")
 
 # Load model and preprocessing functions
 #extra ML made just for uber
-uber1 = joblib.load("Uber1.pkl")
-company = joblib.load("company.pkl")
+uber1 = joblib.load("Streamlit/Uber1.pkl")
+company = joblib.load("Streamlit/company.pkl")
 
 nltk.download('stopwords')
 
@@ -39,7 +39,7 @@ def get_prediction_proba(docx):
 def home():
     st.title("Company Review Analysis")
     st.write("The goal of this analysis is to analyze employee reviews submitted on Glassdoor, with the hope to help employers gain real insights on their employee engagement.") 
-    image1= Image.open("company1.png")
+    image1= Image.open("Streamlit/company1.png")
     st.image(image1)
     st.write("The analysis aimed to answer these questions: ")
     st.write("What employees like and dislike about this company? What are the keywords that people say about this company? What can this company do to improve employee engagement?  ")
@@ -89,7 +89,7 @@ def home():
             result_df = pd.DataFrame.from_dict(result_dict, orient="index", columns=["Count"])
             st.bar_chart(result_df)
                     
-    image= Image.open("company.png")
+    image= Image.open("Streamlit/company.png")
     st.image(image)
 
 
